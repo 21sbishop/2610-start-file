@@ -139,13 +139,14 @@ body {
 .hero__media {
   position: absolute;
   inset: 0;
-  background-image: url("../img/hero.svg");
+  background-color: $gray-900; // shows while the photo loads
+  background-image: url("../img/hero.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 65%;
 }
 
 // Scrim gives the overlaid text reliable contrast against the
-// illustration regardless of where it sits in the gradient.
+// photo regardless of where it sits in the frame.
 .hero__scrim {
   position: absolute;
   inset: 0;

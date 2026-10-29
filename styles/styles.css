@@ -186,9 +186,10 @@ body {
 .hero__media {
   position: absolute;
   inset: 0;
-  background-image: url("../img/hero.svg");
+  background-color: #141517;
+  background-image: url("../img/hero.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 65%;
 }
 
 .hero__scrim {
