@@ -1,0 +1,58 @@
+// =========================================================
+// Variables — Orem Design Library
+// Generated from the project's Figma design library.
+// =========================================================
+
+// ---- Brand colors ----
+$color-primary: #1f6f8b; // Utah Lake teal-blue
+$color-secondary: #e2a64b; // Timpanogos sunset gold
+
+// ---- Grey scale (9 steps) ----
+$gray-050: #f7f7f8;
+$gray-100: #edeeef;
+$gray-200: #dadcde;
+$gray-300: #bbbfc3;
+$gray-400: #93989e;
+$gray-500: #6e747b;
+$gray-600: #52585f;
+$gray-700: #3b4046;
+$gray-800: #26292d;
+$gray-900: #141517;
+
+// ---- Semantic colors ----
+$color-bg: #ffffff;
+$color-bg-alt: $gray-050;
+$color-text: $gray-900;
+$color-text-muted: $gray-600;
+$color-border: $gray-200;
+
+// ---- Typography ----
+$font-family-base: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+$font-size-base: 1rem; // 16px
+$font-size-sm: 0.875rem; // 14px
+$font-size-lg: 1.125rem; // 18px
+$font-size-h1: 2.25rem; // 36px (scales up in large.scss)
+$font-size-h2: 1.75rem; // 28px
+$font-size-h3: 1.25rem; // 20px
+
+$line-height-base: 1.6;
+$line-height-tight: 1.2;
+
+// ---- Spacing scale ----
+$space-xs: 0.5rem; // 8px
+$space-sm: 1rem; // 16px
+$space-md: 1.5rem; // 24px
+$space-lg: 2.5rem; // 40px
+$space-xl: 4rem; // 64px
+$space-2xl: 6rem; // 96px
+
+// ---- Layout ----
+$container-max: 1200px; // content stays readable even up to 1600px viewport
+$radius-sm: 6px;
+$radius-md: 12px;
+
+// ---- Breakpoints (used by large.scss) ----
+$bp-tablet: 48rem; // 768px
+$bp-desktop: 64rem; // 1024px
+$bp-wide: 90rem; // 1440px

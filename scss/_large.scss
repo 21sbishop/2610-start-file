@@ -1,0 +1,95 @@
+// =========================================================
+// Large — progressive-enhancement media queries.
+// Mobile-first: small.scss is the 320px baseline, each
+// breakpoint below layers on more room as the viewport grows,
+// all the way up to the 1600px upper bound.
+// =========================================================
+
+// ---- Tablet: 768px+ ----
+@media (min-width: $bp-tablet) {
+  .container {
+    padding-inline: $space-lg;
+  }
+
+  .site-nav__list {
+    gap: $space-lg;
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero__title {
+    font-size: 2.75rem;
+    max-width: 16ch;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .visit {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+  }
+}
+
+// ---- Desktop: 1024px+ ----
+@media (min-width: $bp-desktop) {
+  .site-header__inner {
+    padding-block: $space-sm;
+  }
+
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero__content {
+    padding-block: $space-2xl $space-xl;
+  }
+
+  .hero__eyebrow {
+    font-size: $font-size-base;
+  }
+
+  .hero__title {
+    font-size: 3.5rem;
+    max-width: 18ch;
+  }
+
+  .hero__subtitle {
+    font-size: $font-size-lg;
+  }
+
+  .section {
+    padding-block: $space-2xl;
+  }
+
+  .section__title {
+    font-size: 2.25rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-lg;
+  }
+
+  .card {
+    padding: $space-lg;
+  }
+}
+
+// ---- Wide: 1440px+ (covers up to the 1600px requirement) ----
+@media (min-width: $bp-wide) {
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .section__lede {
+    font-size: $font-size-lg;
+  }
+
+  .stat__value {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover Orem — A Mountain Town Worth Exploring</title>
+  <meta name="description" content="Discover Orem, Utah — at the foot of Mt. Timpanogos. Trails, Utah Lake, community events, and small-town charm minutes from the city." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Discover Orem — A Mountain Town Worth Exploring" />
+  <meta property="og:description" content="Discover Orem, Utah — at the foot of Mt. Timpanogos. Trails, Utah Lake, community events, and small-town charm minutes from the city." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/og-image.png" />
+  <meta property="og:url" content="https://your-username.github.io/2610-start-file/" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#1f6f8b" />
+
+  <!-- Google Font: Work Sans — a clean, geometric-humanist sans with a
+       wide weight range, friendly and highly legible for a general,
+       all-ages community audience across screen sizes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Compiled, minified stylesheet -->
+  <link rel="stylesheet" href="styles/styles.min.css" />
+
+  <!-- Dynamic footer year -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#hero">
+        <img class="brand__mark" src="img/logo.svg" alt="" width="36" height="27" />
+        <span class="brand__name">OREM</span>
+      </a>
+
+      <!-- Way-finding: in-page jump nav with a visible current-section style -->
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a href="#hero" class="site-nav__link is-current">Home</a></li>
+          <li><a href="#features" class="site-nav__link">Explore</a></li>
+          <li><a href="#visit" class="site-nav__link">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO: scaling background image with text overlay -->
+    <section class="hero" id="hero">
+      <div class="hero__media" role="img" aria-label="Illustrated view of Mt. Timpanogos behind Orem at sunset"></div>
+      <div class="hero__scrim"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Utah County · Foot of Mt. Timpanogos</p>
+        <h1 class="hero__title">A mountain town worth exploring.</h1>
+        <p class="hero__subtitle">
+          Trailheads, Utah Lake sunsets, and a close-knit community — all
+          fifteen minutes from the city.
+        </p>
+        <a class="button button--primary" href="#features">See what's here</a>
+      </div>
+    </section>
+
+    <!-- FEATURES: proximity (grouped card content) + alignment (grid) + contrast -->
+    <section class="section" id="features">
+      <div class="container">
+        <p class="section__eyebrow">Why Orem</p>
+        <h2 class="section__title">Three reasons locals never leave.</h2>
+        <p class="section__lede">
+          Orem sits where the mountains meet the lake — close enough to
+          Salt Lake City for a commute, far enough to actually breathe.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card__icon card__icon--primary" aria-hidden="true">▲</div>
+            <h3 class="card__title">The Mountain</h3>
+            <p class="card__text">
+              Mt. Timpanogos anchors the skyline, with trailheads for
+              every skill level just minutes from downtown.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon card__icon--secondary" aria-hidden="true">●</div>
+            <h3 class="card__title">The Lake</h3>
+            <p class="card__text">
+              Utah Lake's shoreline is a five-minute drive for sunset
+              walks, paddleboarding, and quiet evenings.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon card__icon--primary" aria-hidden="true">◆</div>
+            <h3 class="card__title">The Community</h3>
+            <p class="card__text">
+              Farmers markets, UVU events, and a downtown that actually
+              fills up on a Friday night.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT: secondary content block demonstrating hierarchy + visual tangent
+         (its container shares the exact same left/right edges as the hero
+         content and the card grid above, so the page reads as one aligned
+         column rather than a stack of unrelated blocks) -->
+    <section class="section section--alt" id="visit">
+      <div class="container visit">
+        <div class="visit__text">
+          <p class="section__eyebrow">Plan a visit</p>
+          <h2 class="section__title">Start at the trailhead, end at the lake.</h2>
+          <p class="section__lede">
+            Most visitors spend the morning on the Bonneville Shoreline
+            Trail, grab lunch downtown, then catch the sunset from Utah
+            Lake State Park. It's an easy day, and a good one.
+          </p>
+          <a class="button button--secondary" href="#hero">Back to top</a>
+        </div>
+        <div class="visit__panel">
+          <dl class="stat-list">
+            <div class="stat">
+              <dt class="stat__label">Elevation</dt>
+              <dd class="stat__value">4,774 ft</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label">From SLC</dt>
+              <dd class="stat__value">~35 min</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label">Trailheads</dt>
+              <dd class="stat__value">12+</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="brand brand--footer" href="#hero">
+        <img class="brand__mark" src="img/logo.svg" alt="" width="28" height="21" />
+        <span class="brand__name">OREM</span>
+      </a>
+      <p class="site-footer__copy">
+        &copy; <span id="year"></span> Discover Orem. Built for DWDD 2610.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
