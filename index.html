@@ -21,16 +21,19 @@
   <link rel="manifest" href="site.webmanifest" />
   <meta name="theme-color" content="#1f6f8b" />
 
- 
+  <!-- Google Font: Work Sans — a clean, geometric-humanist sans with a
+       wide weight range, friendly and highly legible for a general,
+       all-ages community audience across screen sizes. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
- 
+  <!-- Compiled, minified stylesheet -->
   <link rel="stylesheet" href="styles/styles.min.css" />
 
-
-  <script src="js/script.js" defer></script>
+  <!-- Scripts -->
+  <script src="scripts/year.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -38,23 +41,25 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="#hero">
-        <img class="brand__mark" src="img/logo.svg" alt="" width="36" height="27" />
+        <img class="brand__mark" src="img/logo.svg" alt="" width="36" height="27" loading="lazy" />
         <span class="brand__name">OREM</span>
       </a>
-
-      
-      <nav class="site-nav" aria-label="Primary">
-        <ul class="site-nav__list">
-          <li><a href="#hero" class="site-nav__link is-current">Home</a></li>
-          <li><a href="#features" class="site-nav__link">Explore</a></li>
-          <li><a href="#visit" class="site-nav__link">Visit</a></li>
-        </ul>
-      </nav>
+      <button class="hamburger-button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav"></button>
     </div>
   </header>
 
+  <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+    <div class="container">
+      <ul class="site-nav">
+        <li class="active"><a class="site-nav__link" href="#hero">Home</a></li>
+        <li><a class="site-nav__link" href="#features">Explore</a></li>
+        <li><a class="site-nav__link" href="#visit">Visit</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main id="main">
-  
+    <!-- HERO: scaling background image with text overlay -->
     <section class="hero" id="hero">
       <div class="hero__media" role="img" aria-label="Golden-hour view of the Wasatch mountains and fall foliage in Provo Canyon, Utah"></div>
       <div class="hero__scrim"></div>
@@ -69,7 +74,7 @@
       </div>
     </section>
 
-    
+    <!-- FEATURES: proximity (grouped card content) + alignment (grid) + contrast -->
     <section class="section" id="features">
       <div class="container">
         <p class="section__eyebrow">Why Orem</p>
@@ -110,7 +115,10 @@
       </div>
     </section>
 
-  
+    <!-- VISIT: secondary content block demonstrating hierarchy + visual tangent
+         (its container shares the exact same left/right edges as the hero
+         content and the card grid above, so the page reads as one aligned
+         column rather than a stack of unrelated blocks) -->
     <section class="section section--alt" id="visit">
       <div class="container visit">
         <div class="visit__text">
@@ -146,11 +154,18 @@
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <a class="brand brand--footer" href="#hero">
-        <img class="brand__mark" src="img/logo.svg" alt="" width="28" height="21" />
+        <img class="brand__mark" src="img/logo.svg" alt="" width="28" height="21" loading="lazy" />
         <span class="brand__name">OREM</span>
       </a>
+
+      <section class="social">
+        <a href="#" target="_blank" rel="noopener" aria-label="Orem on Facebook"><img src="img/icon-facebook.svg" alt="" width="16" height="16"></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Orem on Instagram"><img src="img/icon-instagram.svg" alt="" width="16" height="16"></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Orem on YouTube"><img src="img/icon-youtube.svg" alt="" width="16" height="16"></a>
+      </section>
+
       <p class="site-footer__copy">
-        &copy; <span id="year"></span> Discover Orem. Built for DWDD 2610.
+        &copy; <span id="currentyear"></span> &bull; Discover Orem &bull; DWDD 2610
       </p>
     </div>
   </footer>

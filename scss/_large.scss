@@ -11,8 +11,17 @@
     padding-inline: $space-lg;
   }
 
-  .site-nav__list {
+  // The nav has room to sit inline now, so the hamburger disappears
+  // and the dropdown becomes a plain horizontal row.
+  .hamburger-button {
+    display: none;
+  }
+
+  .primary-nav .site-nav {
+    display: flex;
+    flex-direction: row;
     gap: $space-lg;
+    padding-block: $space-xs;
   }
 
   .hero {
