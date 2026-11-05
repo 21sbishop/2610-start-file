@@ -1,0 +1,10 @@
+// =========================================================
+// Main entry point — this is the only file Live Sass Compiler
+// should watch. It pulls in every partial in order and outputs
+// styles.css + styles.min.css into /styles.
+// =========================================================
+
+@import "normalize";
+@import "variables";
+@import "small";
+@import "large";
