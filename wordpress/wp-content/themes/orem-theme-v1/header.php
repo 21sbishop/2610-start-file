@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/images/og-image.jpg" />
 
   <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
