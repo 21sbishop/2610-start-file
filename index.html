@@ -39,10 +39,13 @@
 
 
   <link rel="stylesheet" href="styles/styles.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Scripts -->
   <script src="scripts/year.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="scripts/swiper.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -70,8 +73,37 @@
   <main id="main">
  
     <section class="hero" id="hero">
-      <div class="hero__media" role="img" aria-label="Golden-hour view of the Wasatch mountains and fall foliage in Provo Canyon, Utah"></div>
+      <!-- Slider: Swiper.js, small images up to 450px wide, large images above -->
+      <div class="swiper hero__media">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <source media="(min-width: 450px)" srcset="sliders/slider1-large.webp">
+              <img src="sliders/slider1-small.webp" alt="Summer on Main Street in Orem, with a man walking his golden retriever past classic cars" width="450" height="338" loading="lazy">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source media="(min-width: 450px)" srcset="sliders/slider2-large.webp">
+              <img src="sliders/slider2-small.webp" alt="Fall on Main Street in Orem, with orange and red trees, scooters, and bike riders" width="450" height="338" loading="lazy">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source media="(min-width: 450px)" srcset="sliders/slider3-large.webp">
+              <img src="sliders/slider3-small.webp" alt="Winter on Main Street in Orem, with neighbors shoveling snow from the sidewalks" width="450" height="338" loading="lazy">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source media="(min-width: 450px)" srcset="sliders/slider4-large.webp">
+              <img src="sliders/slider4-small.webp" alt="Fireworks over Main Street in Orem on a summer night" width="450" height="338" loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </div>
       <div class="hero__scrim"></div>
+      <div class="swiper-pagination"></div>
       <div class="container hero__content">
         <p class="hero__eyebrow">Utah County · Foot of Mt. Timpanogos</p>
         <h1 class="hero__title">A mountain town worth exploring.</h1>

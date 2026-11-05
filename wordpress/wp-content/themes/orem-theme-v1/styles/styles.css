@@ -231,9 +231,6 @@ body {
   position: absolute;
   inset: 0;
   background-color: #141517;
-  background-image: url("../images/hero.jpg");
-  background-size: cover;
-  background-position: center 65%;
 }
 
 .hero__scrim {
@@ -490,4 +487,41 @@ body {
   .stat__value {
     font-size: 1.75rem;
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .swiper.hero__media {
+  position: absolute;
+  z-index: 0;
+}
+
+.swiper-slide picture {
+  display: block;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  --swiper-theme-color: #e2a64b;
+  --swiper-pagination-bullet-inactive-color: #edeeef;
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+}
+
+.hero .swiper-pagination {
+  z-index: 2;
+}
+
+.hero__scrim {
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(20, 21, 23, 0.85), rgba(20, 21, 23, 0.45) 70%, rgba(20, 21, 23, 0.2));
 }

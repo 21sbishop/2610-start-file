@@ -98,6 +98,7 @@ body {
   padding: 0.5rem 1rem;
   z-index: 100;
 }
+
 .skip-link:focus {
   top: 0;
 }
@@ -142,6 +143,7 @@ body {
   cursor: pointer;
   color: #141517;
 }
+
 .hamburger-button::before {
   content: "";
   position: absolute;
@@ -153,6 +155,7 @@ body {
   border-radius: 2px;
   box-shadow: 0 7px 0 currentColor, 0 14px 0 currentColor;
 }
+
 .hamburger-button:focus-visible {
   outline: 2px solid #1f6f8b;
   outline-offset: 4px;
@@ -182,6 +185,7 @@ body {
   border-bottom: 2px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
+
 .site-nav__link:hover, .site-nav__link:focus-visible {
   color: #141517;
 }
@@ -199,6 +203,7 @@ body {
   font-size: 0.875rem;
   transition: transform 0.15s ease, background-color 0.15s ease;
 }
+
 .button:hover, .button:focus-visible {
   transform: translateY(-1px);
 }
@@ -226,9 +231,6 @@ body {
   position: absolute;
   inset: 0;
   background-color: #141517;
-  background-image: url("../img/hero.jpg");
-  background-size: cover;
-  background-position: center 65%;
 }
 
 .hero__scrim {
@@ -395,11 +397,13 @@ body {
   display: flex;
   gap: 1rem;
 }
+
 .social a {
   display: inline-flex;
   color: #52585f;
   transition: color 0.15s ease;
 }
+
 .social a:hover, .social a:focus-visible {
   color: #1f6f8b;
 }
@@ -437,6 +441,7 @@ body {
     align-items: center;
   }
 }
+
 @media (min-width: 64rem) {
   .site-header__inner {
     padding-block: 1rem;
@@ -471,6 +476,7 @@ body {
     padding: 2.5rem;
   }
 }
+
 @media (min-width: 90rem) {
   .hero__title {
     font-size: 4rem;
@@ -483,4 +489,39 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .swiper.hero__media {
+  position: absolute;
+  z-index: 0;
+}
+
+.swiper-slide picture {
+  display: block;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  --swiper-theme-color: #e2a64b;
+  --swiper-pagination-bullet-inactive-color: #edeeef;
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+}
+
+.hero .swiper-pagination {
+  z-index: 2;
+}
+
+.hero__scrim {
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(20, 21, 23, 0.85), rgba(20, 21, 23, 0.45) 70%, rgba(20, 21, 23, 0.2));
+}

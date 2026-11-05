@@ -1,0 +1,50 @@
+// =========================================================
+// Slider (Swiper.js) — kept in its own partial so it doesn't
+// get mixed in with the rest of the site styles. The slider
+// fills the hero behind the headline.
+// =========================================================
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+// Swiper's stylesheet loads after ours, so restate the hero layout:
+// the slider stays behind the scrim and the headline.
+.hero .swiper.hero__media {
+  position: absolute;
+  z-index: 0;
+}
+
+.swiper-slide picture {
+  display: block;
+  height: 100%;
+}
+
+// Images fill each slide; cover keeps them from stretching
+// as the hero changes shape between phone and desktop.
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Dots sit above the scrim, in the brand colors.
+.hero {
+  --swiper-theme-color: #{$color-secondary};
+  --swiper-pagination-bullet-inactive-color: #{$gray-100};
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+}
+
+.hero .swiper-pagination {
+  z-index: 2;
+}
+
+// A stronger scrim than the single hero photo needed, so the headline
+// stays readable over bright slides like snow and summer sky. Swipes
+// and clicks pass through it to the slider.
+.hero__scrim {
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(20, 21, 23, 0.85), rgba(20, 21, 23, 0.45) 70%, rgba(20, 21, 23, 0.2));
+}
