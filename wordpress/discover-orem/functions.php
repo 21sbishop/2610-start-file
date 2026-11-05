@@ -125,7 +125,7 @@ add_filter( 'document_title_separator', 'discover_orem_title_separator' );
 function discover_orem_head_meta() {
 	$title = wp_get_document_title();
 	$url   = is_front_page() ? home_url( '/' ) : get_permalink();
-	$image = get_theme_file_uri( 'img/og-image.png' );
+	$image = get_theme_file_uri( 'img/og-image.jpg' );
 	?>
 	<meta name="description" content="<?php echo esc_attr( DISCOVER_OREM_DESCRIPTION ); ?>">
 
@@ -133,8 +133,12 @@ function discover_orem_head_meta() {
 	<meta property="og:title" content="<?php echo esc_attr( $title ); ?>">
 	<meta property="og:description" content="<?php echo esc_attr( DISCOVER_OREM_DESCRIPTION ); ?>">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="<?php echo esc_url( $image ); ?>">
 	<meta property="og:url" content="<?php echo esc_url( $url ); ?>">
+	<meta property="og:image" content="<?php echo esc_url( $image ); ?>">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Discover Orem: Mt. Timpanogos above fall foliage in Utah County">
+	<meta property="og:logo" content="<?php echo esc_url( get_theme_file_uri( 'img/android-chrome-512x512.png' ) ); ?>">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="<?php echo esc_attr( $title ); ?>">
 	<meta name="twitter:description" content="<?php echo esc_attr( DISCOVER_OREM_DESCRIPTION ); ?>">
