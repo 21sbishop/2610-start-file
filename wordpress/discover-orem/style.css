@@ -1,0 +1,16 @@
+/*
+Theme Name: Discover Orem
+Theme URI: https://lightslategrey-woodpecker-601101.hostingersite.com/
+Author: Spencer Bishop
+Author URI: https://github.com/21sbishop
+Description: WordPress theme for the Discover Orem site (DWDD 2610). Built from the 2610-start-file HTML and SCSS: Work Sans type, primary teal and secondary amber, a scaling hero image, and a hamburger navigation. Styles live in styles/styles.min.css, compiled from the scss folder.
+Version: 1.0.0
+Requires at least: 6.3
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: discover-orem
+*/
+
+/* The site's styles are compiled from scss/ into styles/styles.min.css,
+   which functions.php loads. This file only holds the theme header. */

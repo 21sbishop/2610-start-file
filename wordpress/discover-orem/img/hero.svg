@@ -1,0 +1,41 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15495c"/>
+      <stop offset="55%" stop-color="#1f6f8b"/>
+      <stop offset="100%" stop-color="#e2a64b"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f6f8b"/>
+      <stop offset="100%" stop-color="#10333f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sky -->
+  <rect x="0" y="0" width="1600" height="900" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="1180" cy="430" r="90" fill="#e2a64b"/>
+
+  <!-- distant hills -->
+  <polygon points="0,560 220,430 460,560 700,460 1000,560 1300,470 1600,560 1600,620 0,620" fill="#1f6f8b" opacity="0.35"/>
+
+  <!-- Mt. Timpanogos twin peaks -->
+  <polygon points="760,620 940,260 1120,620" fill="#1f6f8b" opacity="0.55"/>
+  <polygon points="420,620 660,180 900,620" fill="#1f6f8b"/>
+
+  <!-- snow caps -->
+  <polygon points="660,180 710,270 610,270" fill="#f7f7f8"/>
+  <polygon points="940,260 975,330 905,330" fill="#f7f7f8"/>
+
+  <!-- lake -->
+  <rect x="0" y="620" width="1600" height="280" fill="url(#lake)"/>
+
+  <!-- reflection shimmer -->
+  <rect x="540" y="650" width="260" height="10" fill="#f7f7f8" opacity="0.12"/>
+  <rect x="580" y="680" width="180" height="8" fill="#f7f7f8" opacity="0.1"/>
+  <rect x="500" y="710" width="320" height="10" fill="#f7f7f8" opacity="0.08"/>
+  <rect x="1080" y="650" width="220" height="10" fill="#e2a64b" opacity="0.18"/>
+  <rect x="1110" y="682" width="150" height="8" fill="#e2a64b" opacity="0.14"/>
+  <rect x="1060" y="712" width="280" height="10" fill="#e2a64b" opacity="0.1"/>
+</svg>
