@@ -10,7 +10,7 @@ while ( have_posts() ) :
   else :
     ?>
     <section class="section">
-      <div class="container">
+      <div class="container page-content">
         <h1><?php the_title(); ?></h1>
         <?php the_content(); ?>
       </div>

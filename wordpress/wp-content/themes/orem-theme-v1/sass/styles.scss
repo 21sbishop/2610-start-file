@@ -7,5 +7,6 @@
 @import "normalize";
 @import "variables";
 @import "small";
-@import "large";
 @import "swiper";
+@import "video";
+@import "large"; // last, so its media queries win

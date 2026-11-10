@@ -413,6 +413,124 @@ body {
   color: #52585f;
 }
 
+.page-content h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.page-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-block: 2.5rem 0.5rem;
+}
+
+.page-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-block: 1.5rem 0.5rem;
+}
+
+.page-content p {
+  max-width: 65ch;
+  color: #52585f;
+  margin-bottom: 1rem;
+}
+
+.page-content ul {
+  margin-bottom: 1rem;
+}
+
+.page-content li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #52585f;
+}
+
+.page-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e2a64b;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .swiper.hero__media {
+  position: absolute;
+  z-index: 0;
+}
+
+.swiper-slide picture {
+  display: block;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  --swiper-theme-color: #e2a64b;
+  --swiper-pagination-bullet-inactive-color: #edeeef;
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+}
+
+.hero .swiper-pagination {
+  z-index: 2;
+}
+
+.hero__scrim {
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(20, 21, 23, 0.85), rgba(20, 21, 23, 0.45) 70%, rgba(20, 21, 23, 0.2));
+}
+
+.hero-video {
+  position: relative;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-video a {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #141517;
+  background-color: #e2a64b;
+  border: 2px solid #141517;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(20, 21, 23, 0.35);
+  transition: background-color 0.15s ease;
+}
+
+.hero-video a:hover, .hero-video a:focus-visible {
+  background-color: #ffffff;
+}
+
 @media (min-width: 48rem) {
   .container {
     padding-inline: 2.5rem;
@@ -439,6 +557,15 @@ body {
   .visit {
     grid-template-columns: 3fr 2fr;
     align-items: center;
+  }
+  .hero-video a {
+    right: 20px;
+    bottom: 20px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+  .page-content h1 {
+    font-size: 2.75rem;
   }
 }
 
@@ -487,41 +614,4 @@ body {
   .stat__value {
     font-size: 1.75rem;
   }
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.hero .swiper.hero__media {
-  position: absolute;
-  z-index: 0;
-}
-
-.swiper-slide picture {
-  display: block;
-  height: 100%;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero {
-  --swiper-theme-color: #e2a64b;
-  --swiper-pagination-bullet-inactive-color: #edeeef;
-  --swiper-pagination-bullet-inactive-opacity: 0.6;
-}
-
-.hero .swiper-pagination {
-  z-index: 2;
-}
-
-.hero__scrim {
-  pointer-events: none;
-  background: linear-gradient(to top, rgba(20, 21, 23, 0.85), rgba(20, 21, 23, 0.45) 70%, rgba(20, 21, 23, 0.2));
 }

@@ -41,6 +41,18 @@
     grid-template-columns: 3fr 2fr;
     align-items: center;
   }
+
+  // More room for the call-to-action button over the hero video.
+  .hero-video a {
+    right: 20px;
+    bottom: 20px;
+    padding: $space-xs $space-md;
+    font-size: $font-size-base;
+  }
+
+  .page-content h1 {
+    font-size: 2.75rem;
+  }
 }
 
 // ---- Desktop: 1024px+ ----

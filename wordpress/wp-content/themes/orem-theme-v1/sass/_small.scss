@@ -385,3 +385,58 @@ body {
   font-size: $font-size-sm;
   color: $color-text-muted;
 }
+
+// ---------------------------------------------------------
+// Page content — headings, text, and lists inside regular
+// WordPress pages (Amenities, Home, Test 1). The reset in
+// normalize strips these, so they get the site's type scale.
+// ---------------------------------------------------------
+.page-content {
+  h1 {
+    font-size: $font-size-h1;
+    font-weight: 700;
+    line-height: $line-height-tight;
+    margin-bottom: $space-md;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+    font-weight: 700;
+    line-height: $line-height-tight;
+    margin-block: $space-lg $space-xs;
+  }
+
+  h3 {
+    font-size: $font-size-h3;
+    font-weight: 600;
+    margin-block: $space-md $space-xs;
+  }
+
+  p {
+    max-width: 65ch;
+    color: $color-text-muted;
+    margin-bottom: $space-sm;
+  }
+
+  ul {
+    margin-bottom: $space-sm;
+  }
+
+  li {
+    position: relative;
+    padding-left: $space-md;
+    margin-bottom: $space-xs;
+    color: $color-text-muted;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $color-secondary;
+    }
+  }
+}

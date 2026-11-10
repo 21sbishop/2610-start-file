@@ -1,0 +1,41 @@
+// =========================================================
+// Hero video — a looping, muted video with a call-to-action
+// button floating over its bottom-right corner.
+// =========================================================
+
+// The parent is positioned so the button can be stacked on top of the video.
+.hero-video {
+  position: relative;
+  margin-bottom: $space-lg;
+  border-radius: $radius-md;
+  overflow: hidden;
+
+  // Scales like a standard image.
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  // Call to action: absolutely positioned 10px in from the right and bottom.
+  a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: $space-xs $space-sm;
+    font-size: $font-size-sm;
+    font-weight: 600;
+    text-decoration: none;
+    color: $gray-900;
+    background-color: $color-secondary;
+    border: 2px solid $gray-900;
+    border-radius: $radius-sm;
+    box-shadow: 0 4px 12px rgba(20, 21, 23, 0.35);
+    transition: background-color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-bg;
+    }
+  }
+}
