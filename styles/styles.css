@@ -378,6 +378,7 @@ body {
 }
 
 .site-footer {
+  clear: both;
   border-top: 1px solid #dadcde;
   padding-block: 1.5rem;
 }
@@ -413,52 +414,72 @@ body {
   color: #52585f;
 }
 
-.page-content h1 {
+main.page {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 4rem 1rem;
+}
+
+main > h1 {
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
-.page-content h2 {
+main > h2 {
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
   margin-block: 2.5rem 0.5rem;
 }
 
-.page-content h3 {
+main > h3 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-block: 1.5rem 0.5rem;
 }
 
-.page-content p {
+main > p {
   max-width: 65ch;
   color: #52585f;
   margin-bottom: 1rem;
 }
 
-.page-content ul {
-  margin-bottom: 1rem;
+main > ul {
+  margin-bottom: 1.5rem;
 }
 
-.page-content li {
+main > ul li {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
   color: #52585f;
 }
 
-.page-content li::before {
-  content: "";
+main > ul li::before {
+  content: "\2713";
   position: absolute;
   left: 0;
-  top: 0.6em;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #e2a64b;
+  font-weight: 700;
+  color: #1f6f8b;
+}
+
+main > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+}
+
+main > address {
+  font-style: normal;
+  line-height: 1.6;
+  color: #141517;
+  padding-left: 1rem;
+  border-left: 4px solid #e2a64b;
+  margin-block: 1.5rem;
 }
 
 .swiper {
@@ -532,6 +553,67 @@ body {
   background-color: #ffffff;
 }
 
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #dadcde;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(20, 21, 23, 0.06);
+}
+
+.card-1 span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #141517;
+}
+
+.card-1 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.card-1 a {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #1f6f8b;
+  border-bottom: 2px solid #e2a64b;
+  transition: color 0.15s ease;
+}
+
+.card-1 a:hover, .card-1 a:focus-visible {
+  color: #141517;
+}
+
+.grid-1,
+.grid-2,
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 25rem) {
+  .grid-2,
+.grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 50rem) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 @media (min-width: 48rem) {
   .container {
     padding-inline: 2.5rem;
@@ -567,8 +649,16 @@ body {
     border-width: 2px;
     border-radius: 6px;
   }
-  .page-content h1 {
+  main.page {
+    padding-inline: 2.5rem;
+  }
+  main > h1 {
     font-size: 2.75rem;
+  }
+  main > img {
+    float: right;
+    width: 50%;
+    margin: 0 0 1.5rem 2.5rem;
   }
 }
 

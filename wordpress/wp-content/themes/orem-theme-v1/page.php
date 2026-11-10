@@ -5,18 +5,14 @@ while ( have_posts() ) :
   the_post();
 
   // The homepage content has its own hero <h1>, so only other pages show the title.
-  if ( is_front_page() ) :
-    the_content();
-  else :
+  // The title and content sit directly inside <main> for the scoped main > rules.
+  if ( ! is_front_page() ) :
     ?>
-    <section class="section">
-      <div class="container page-content">
-        <h1><?php the_title(); ?></h1>
-        <?php the_content(); ?>
-      </div>
-    </section>
+    <h1><?php the_title(); ?></h1>
     <?php
   endif;
+
+  the_content();
 endwhile;
 
 get_footer();

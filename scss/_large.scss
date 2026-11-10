@@ -5,6 +5,21 @@
 // all the way up to the 1600px upper bound.
 // =========================================================
 
+// ---- Grid: 2 columns above 400px (grid-2 and grid-3) ----
+@media (min-width: 25rem) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// ---- Grid: 3 columns above 800px (grid-3) ----
+@media (min-width: 50rem) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 // ---- Tablet: 768px+ ----
 @media (min-width: $bp-tablet) {
   .container {
@@ -52,8 +67,19 @@
     border-radius: $radius-sm;
   }
 
-  .page-content h1 {
+  main.page {
+    padding-inline: $space-lg;
+  }
+
+  main > h1 {
     font-size: 2.75rem;
+  }
+
+  // The square page photo floats right at half the page width.
+  main > img {
+    float: right;
+    width: 50%;
+    margin: 0 0 $space-md $space-lg;
   }
 }
 

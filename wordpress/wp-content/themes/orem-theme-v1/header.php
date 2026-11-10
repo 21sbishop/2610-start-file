@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/styles.min.css?v=4" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/styles.min.css?v=5" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Scripts -->
@@ -74,4 +74,4 @@
     </div>
   </nav>
 
-  <main id="main">
+  <main id="main"<?php echo is_front_page() ? '' : ' class="page"'; ?>>

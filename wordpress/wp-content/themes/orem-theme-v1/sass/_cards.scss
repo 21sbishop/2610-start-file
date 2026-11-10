@@ -1,0 +1,47 @@
+// =========================================================
+// Cards — a reusable card layout. The tags inside a card
+// need no classes; they're styled as children of .card-1.
+// =========================================================
+
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  padding: $space-sm;
+  background-color: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  box-shadow: 0 2px 8px rgba(20, 21, 23, 0.06);
+
+  // Card title
+  span {
+    font-size: $font-size-h3;
+    font-weight: 700;
+    line-height: $line-height-tight;
+    color: $color-text;
+  }
+
+  // Thumbnail photo (400 x 200)
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: $radius-sm;
+  }
+
+  // Link to the amenity's page
+  a {
+    align-self: flex-start;
+    margin-top: $space-xs;
+    font-weight: 600;
+    font-size: $font-size-sm;
+    color: $color-primary;
+    border-bottom: 2px solid $color-secondary;
+    transition: color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-text;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// =========================================================
+// Grid — column layouts a WordPress editor can choose just by
+// changing a class: grid-1, grid-2, or grid-3. Every grid
+// starts as one column; large.scss adds columns as the
+// screen widens (2 columns above 400px, 3 above 800px).
+// =========================================================
+
+.grid-1,
+.grid-2,
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-md;
+  margin-bottom: $space-lg;
+}

@@ -350,6 +350,7 @@ body {
 // Footer
 // ---------------------------------------------------------
 .site-footer {
+  clear: both; // stay below a floated page photo
   border-top: 1px solid $color-border;
   padding-block: $space-md;
 }
@@ -387,56 +388,80 @@ body {
 }
 
 // ---------------------------------------------------------
-// Page content — headings, text, and lists inside regular
-// WordPress pages (Amenities, Home, Test 1). The reset in
-// normalize strips these, so they get the site's type scale.
+// Page layout — regular WordPress pages put the title and
+// content straight inside <main class="page">, so it gets the
+// same width and side padding as .container.
 // ---------------------------------------------------------
-.page-content {
-  h1 {
+main.page {
+  max-width: $container-max;
+  margin-inline: auto;
+  padding: $space-xl $space-sm;
+}
+
+// Scoped page content — the > (direct child) selectors only
+// style tags placed directly inside <main>. Tags nested deeper,
+// like the image and title inside a card, keep their own rules.
+main {
+  > h1 {
     font-size: $font-size-h1;
     font-weight: 700;
     line-height: $line-height-tight;
     margin-bottom: $space-md;
   }
 
-  h2 {
+  > h2 {
     font-size: $font-size-h2;
     font-weight: 700;
     line-height: $line-height-tight;
     margin-block: $space-lg $space-xs;
   }
 
-  h3 {
+  > h3 {
     font-size: $font-size-h3;
     font-weight: 600;
     margin-block: $space-md $space-xs;
   }
 
-  p {
+  > p {
     max-width: 65ch;
     color: $color-text-muted;
     margin-bottom: $space-sm;
   }
 
-  ul {
-    margin-bottom: $space-sm;
+  > ul {
+    margin-bottom: $space-md;
+
+    li {
+      position: relative;
+      padding-left: $space-md;
+      margin-bottom: $space-xs;
+      color: $color-text-muted;
+
+      // Checkmark bullet
+      &::before {
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+        color: $color-primary;
+      }
+    }
   }
 
-  li {
-    position: relative;
-    padding-left: $space-md;
-    margin-bottom: $space-xs;
-    color: $color-text-muted;
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: $space-md;
+    border-radius: $radius-md;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.6em;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: $color-secondary;
-    }
+  > address {
+    font-style: normal;
+    line-height: $line-height-base;
+    color: $color-text;
+    padding-left: $space-sm;
+    border-left: 4px solid $color-secondary;
+    margin-block: $space-md;
   }
 }
