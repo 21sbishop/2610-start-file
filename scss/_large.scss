@@ -48,6 +48,8 @@
     bottom: 20px;
     padding: $space-xs $space-md;
     font-size: $font-size-base;
+    border-width: 2px;
+    border-radius: $radius-sm;
   }
 
   .page-content h1 {
