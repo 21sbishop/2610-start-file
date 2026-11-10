@@ -20,3 +20,15 @@ function orem_section_links_not_current( $classes, $item ) {
   return $classes;
 }
 add_filter( 'nav_menu_css_class', 'orem_section_links_not_current', 10, 2 );
+
+// Wayfinding: the four amenity pages aren't in the menu, so highlight Amenities while viewing them
+function orem_amenity_pages_current( $classes, $item ) {
+  $amenity_pages = array( 'library', 'recreation-center', 'sports-field', 'city-park' );
+  $amenities     = get_page_by_path( 'amenities' );
+
+  if ( $amenities && is_page( $amenity_pages ) && (int) $item->object_id === $amenities->ID ) {
+    $classes[] = 'current-menu-item';
+  }
+  return $classes;
+}
+add_filter( 'nav_menu_css_class', 'orem_amenity_pages_current', 10, 2 );
