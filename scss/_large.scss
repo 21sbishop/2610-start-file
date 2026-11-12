@@ -20,6 +20,25 @@
   }
 }
 
+// ---- Downloads: more columns of PDF links as the screen widens ----
+@media (min-width: 36rem) {
+  .downloads div {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 56rem) {
+  .downloads div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 80rem) {
+  .downloads div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 // ---- Tablet: 768px+ ----
 @media (min-width: $bp-tablet) {
   .container {
@@ -116,6 +135,11 @@
     float: right;
     width: 50%;
     margin: 0 0 $space-md $space-lg;
+  }
+
+  // The agenda card gets more breathing room once there's space for it
+  .agenda {
+    padding: $space-lg;
   }
 }
 

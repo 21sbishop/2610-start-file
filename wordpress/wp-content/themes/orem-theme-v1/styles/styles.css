@@ -648,6 +648,145 @@ main > address {
   margin-bottom: 2.5rem;
 }
 
+.agenda {
+  counter-reset: agenda-item;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 1rem;
+  background-color: #f7f7f8;
+  border-top: 4px solid #1f6f8b;
+  border-radius: 0 0 12px 12px;
+}
+
+.agenda p {
+  max-width: 65ch;
+  margin-bottom: 0.5rem;
+  color: #52585f;
+}
+
+.agenda strong {
+  color: #141517;
+  font-weight: 600;
+}
+
+.agenda ul {
+  margin: 0 0 1rem 2.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.agenda li {
+  position: relative;
+  max-width: 65ch;
+  padding-left: 1rem;
+  margin-bottom: 0.25rem;
+  color: #52585f;
+}
+
+.agenda li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: #e2a64b;
+  font-weight: 700;
+}
+
+.agenda .step + p {
+  margin-left: 2.75rem;
+}
+
+.agenda .step {
+  counter-increment: agenda-item;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dadcde;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #141517;
+}
+
+.agenda .step::before {
+  content: counter(agenda-item);
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #1f6f8b;
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+.downloads {
+  margin-bottom: 2.5rem;
+}
+
+.downloads details {
+  margin-bottom: 1rem;
+  border: 1px solid #dadcde;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.downloads details[open] {
+  padding-bottom: 1rem;
+}
+
+.downloads summary {
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f6f8b;
+  cursor: pointer;
+}
+
+.downloads summary::marker {
+  color: #e2a64b;
+}
+
+.downloads div {
+  display: grid;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.downloads a {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dadcde;
+  border-radius: 6px;
+  background-color: #f7f7f8;
+  font-weight: 500;
+  color: #141517;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.downloads a::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../images/pdf.svg") center/contain no-repeat;
+}
+
+.downloads a::after {
+  content: "\2193";
+  font-weight: 700;
+  color: #1f6f8b;
+}
+
+.downloads a:hover, .downloads a:focus-visible {
+  border-color: #e2a64b;
+  background-color: #edeeef;
+  transform: translateY(-1px);
+}
+
 @media (min-width: 25rem) {
   .grid-2,
 .grid-3 {
@@ -658,6 +797,24 @@ main > address {
 @media (min-width: 50rem) {
   .grid-3 {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 36rem) {
+  .downloads div {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 56rem) {
+  .downloads div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 80rem) {
+  .downloads div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -733,6 +890,9 @@ main > address {
     float: right;
     width: 50%;
     margin: 0 0 1.5rem 2.5rem;
+  }
+  .agenda {
+    padding: 2.5rem;
   }
 }
 

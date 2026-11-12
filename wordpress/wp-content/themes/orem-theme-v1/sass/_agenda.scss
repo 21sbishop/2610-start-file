@@ -1,0 +1,82 @@
+// =========================================================
+// Agenda — the City Council meeting agenda. Everything is
+// scoped inside .agenda so it never touches the rest of the
+// page. Agenda items are plain <p class="step"> tags; CSS
+// numbers them automatically with a counter.
+// =========================================================
+
+.agenda {
+  counter-reset: agenda-item;
+  margin-bottom: $space-lg;
+  padding: $space-md $space-sm;
+  background-color: $color-bg-alt;
+  border-top: 4px solid $color-primary;
+  border-radius: 0 0 $radius-md $radius-md;
+
+  p {
+    max-width: 65ch;
+    margin-bottom: $space-xs;
+    color: $color-text-muted;
+  }
+
+  // Date, time, and location lines
+  strong {
+    color: $color-text;
+    font-weight: 600;
+  }
+
+  ul {
+    margin: 0 0 $space-sm 2.75rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    max-width: 65ch;
+    padding-left: $space-sm;
+    margin-bottom: 0.25rem;
+    color: $color-text-muted;
+
+    &::before {
+      content: "\2013";
+      position: absolute;
+      left: 0;
+      color: $color-secondary;
+      font-weight: 700;
+    }
+  }
+
+  // A paragraph right under an agenda item is its description, so it
+  // lines up with the item's text instead of the number badge.
+  .step + p {
+    margin-left: 2.75rem;
+  }
+
+  .step {
+    counter-increment: agenda-item;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: $space-md;
+    padding-top: $space-sm;
+    border-top: 1px solid $color-border;
+    font-size: $font-size-lg;
+    font-weight: 700;
+    line-height: $line-height-tight;
+    color: $color-text;
+
+    &::before {
+      content: counter(agenda-item);
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+      color: $color-bg;
+      font-size: $font-size-sm;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+// =========================================================
+// Downloads — past meeting agendas. Each year is a closed
+// <details> tag, and each PDF is a plain anchor. Scoped inside
+// .downloads; the CSS adds the PDF icon and the down arrow.
+// =========================================================
+
+.downloads {
+  margin-bottom: $space-lg;
+
+  details {
+    margin-bottom: $space-sm;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    background-color: $color-bg;
+  }
+
+  details[open] {
+    padding-bottom: $space-sm;
+  }
+
+  summary {
+    padding: $space-sm;
+    font-size: $font-size-h3;
+    font-weight: 700;
+    color: $color-primary;
+    cursor: pointer;
+
+    &::marker {
+      color: $color-secondary;
+    }
+  }
+
+  // One column on phones; large.scss adds more columns as room grows
+  div {
+    display: grid;
+    gap: $space-xs;
+    padding-inline: $space-sm;
+  }
+
+  // PDF icon, the date, then a down arrow that says "this downloads"
+  a {
+    display: grid;
+    grid-template-columns: 24px 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem $space-sm;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    background-color: $color-bg-alt;
+    font-weight: 500;
+    color: $color-text;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url("../images/pdf.svg") center / contain no-repeat;
+    }
+
+    &::after {
+      content: "\2193";
+      font-weight: 700;
+      color: $color-primary;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-secondary;
+      background-color: $gray-100;
+      transform: translateY(-1px);
+    }
+  }
+}
