@@ -106,6 +106,8 @@ body {
 // to a dropdown on mobile; large.scss lays it out inline once there's
 // room for it next to the header.
 .primary-nav {
+  position: relative;
+  z-index: 999; // keeps sub-menus above the hero slider and hero video
   border-bottom: 1px solid $color-border;
   background-color: $color-bg;
 }
@@ -114,13 +116,20 @@ body {
   display: none;
   flex-direction: column;
   padding-block: $space-xs;
+
+  // Sub-menus: same reset as the main list, so no bullets
+  li ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 }
 
 .primary-nav.is-open .site-nav {
   display: flex;
 }
 
-.site-nav__link {
+.site-nav a {
   display: block;
   font-weight: 500;
   font-size: $font-size-sm;
@@ -137,9 +146,52 @@ body {
 
 // Way-finding: the current page/section gets a persistent accent
 // underline so visitors always know where they are.
-.site-nav li.active .site-nav__link {
+.site-nav li.current-menu-item a {
   color: $color-primary;
   border-bottom-color: $color-secondary;
+}
+
+// Sub-menu links are smaller and indented so they read as children
+.site-nav li ul a {
+  text-transform: capitalize;
+  font-size: 0.8125rem;
+  padding-left: 15px;
+}
+
+// Way-finding: a parent whose sub-menu holds the current page gets a
+// light gray background, so visitors can see where the page lives.
+.site-nav .current-menu-parent > a {
+  background-color: $gray-100;
+  color: $color-primary;
+}
+
+// A plus after any main item that has a sub-menu, a dash while it's open
+.site-nav .menu-item-has-children > a {
+  display: grid;
+  grid-template-columns: auto 16px;
+  justify-content: start;
+  gap: 0.25rem;
+
+  &::after {
+    content: "+";
+    text-align: center;
+  }
+}
+
+.site-nav .menu-item-has-children:hover > a::after,
+.site-nav .menu-item-has-children:focus-within > a::after {
+  content: "\2014";
+}
+
+// Sub-menus stay hidden until the parent is hovered (mouse) or touched
+// (phones turn a tap into hover). focus-within opens it for keyboards.
+.site-nav .menu-item-has-children > ul {
+  display: none;
+}
+
+.site-nav .menu-item-has-children:hover > ul,
+.site-nav .menu-item-has-children:focus-within > ul {
+  display: block;
 }
 
 // ---------------------------------------------------------

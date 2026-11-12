@@ -39,6 +39,42 @@
     padding-block: $space-xs;
   }
 
+  // The row of links is short enough now to stick to the top while scrolling
+  .primary-nav {
+    position: sticky;
+    top: 0;
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  // Sub-menus drop down over the page content instead of pushing it down
+  .site-nav > li {
+    position: relative;
+  }
+
+  .site-nav > li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 12rem;
+    padding-block: $space-xs;
+    background-color: $gray-100;
+    border-radius: 0 0 $radius-sm $radius-sm;
+    box-shadow: 0 6px 12px rgba($gray-900, 0.15);
+  }
+
+  .site-nav li ul a {
+    padding-inline: $space-sm;
+  }
+
+  // Give the gray way-finding background a little room around the text
+  .site-nav .current-menu-parent > a {
+    padding-inline: $space-xs;
+    border-radius: $radius-sm $radius-sm 0 0;
+  }
+
   .hero {
     min-height: 60vh;
   }

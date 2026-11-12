@@ -11,8 +11,14 @@ if (toggle && nav) {
     toggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  nav.querySelectorAll(".site-nav__link").forEach((link) => {
-    link.addEventListener("click", () => {
+  nav.querySelectorAll(".site-nav a").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      // A parent link (href="#") only opens its sub-menu, so keep the
+      // menu open and don't jump to the top of the page.
+      if (link.parentElement.classList.contains("menu-item-has-children")) {
+        event.preventDefault();
+        return;
+      }
       nav.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
     });
