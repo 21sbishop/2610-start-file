@@ -350,6 +350,7 @@ body {
 
 .card__icon--secondary {
   background-color: $color-secondary;
+  color: $color-text; // dark dot on gold — white on gold fails contrast
 }
 
 .card__title {
