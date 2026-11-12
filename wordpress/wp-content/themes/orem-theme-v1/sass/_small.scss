@@ -233,6 +233,7 @@ body {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  background-color: $gray-900; // dark base under the slider so the white text always has contrast
 }
 
 .hero__media {
