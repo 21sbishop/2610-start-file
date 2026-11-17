@@ -20,3 +20,25 @@ function orem_section_links_not_current( $classes, $item ) {
   return $classes;
 }
 add_filter( 'nav_menu_css_class', 'orem_section_links_not_current', 10, 2 );
+
+// Remove the random paragraph tags Contact Form 7 adds to web forms
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
+
+// No inline CSS: the image CAPTCHA plugin hides its spam-trap field with a
+// style attribute, so swap it for a class the stylesheet hides instead.
+function orem_cf7_no_inline_styles( $html ) {
+  $html = str_replace(
+    array( '<span style="display:none">', '<input type="text" name="kc_honeypot">' ),
+    array( '<span class="kc-honeypot">', '<input type="text" name="kc_honeypot" aria-label="Leave this field empty" tabindex="-1" autocomplete="off">' ),
+    $html
+  );
+
+  // Each CAPTCHA choice is just a radio button and an icon, so its label is
+  // empty. Give each one screen-reader text ("Option 1") the CSS hides.
+  return preg_replace(
+    '/<input aria-label="(\d+)" type="radio" name="kc_captcha"/',
+    '<span class="kc-option-text">Option $1</span><input type="radio" name="kc_captcha"',
+    $html
+  );
+}
+add_filter( 'wpcf7_form_elements', 'orem_cf7_no_inline_styles' );

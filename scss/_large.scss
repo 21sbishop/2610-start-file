@@ -39,6 +39,29 @@
   }
 }
 
+// ---- Council members, medium: photo and contact side by side,
+// responsibilities spanning both columns underneath ----
+@media (min-width: 32rem) {
+  .employees section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .employees section div:nth-child(3) {
+    grid-column: span 2;
+  }
+}
+
+// ---- Council members, large: all three areas in one row ----
+@media (min-width: 54rem) {
+  .employees section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .employees section div:nth-child(3) {
+    grid-column: span 1;
+  }
+}
+
 // ---- Tablet: 768px+ ----
 @media (min-width: $bp-tablet) {
   .container {
@@ -140,6 +163,15 @@
   // The agenda card gets more breathing room once there's space for it
   .agenda {
     padding: $space-lg;
+  }
+
+  // Same for the street lamp form; the button no longer needs full width
+  .wpcf7 form {
+    padding: $space-lg;
+  }
+
+  .wpcf7 .wpcf7-submit {
+    width: auto;
   }
 }
 
