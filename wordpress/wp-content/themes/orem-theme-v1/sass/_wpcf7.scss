@@ -159,7 +159,8 @@
   }
 
   // Feedback under a field that's missing or wrong
-  .wpcf7-not-valid {
+  input.wpcf7-not-valid,
+  textarea.wpcf7-not-valid {
     border-color: $color-error;
   }
 
